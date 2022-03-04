@@ -1,5 +1,7 @@
 #include<iostream>
 #include<string> 
+#include<iostream>
+#include<string> 
 
 using namespace std;
 class rogue 
@@ -9,9 +11,12 @@ private:
 	int age;
 public:
 
-	 rogue(int ageS)
+	 rogue(int ageS, string hairS, string color_eyeS, string noseS)
 	 {
 	   age = ageS;
+	   hair = hairS;
+	   color_eye = color_eyeS;
+	   nose = noseS;
 	 }
 	 ~rogue() {
 		
@@ -29,7 +34,6 @@ public:
 	 void Setcolor_eye(string color_eyeS) {
 		 color_eye = color_eyeS;
 		 }
-
 	 string Getnose() {
 		 return nose;
 	}
@@ -46,7 +50,7 @@ public:
 	}
 	void Vvod()
 	{
-		cout << "Rogue" << "\nhair: " << hair;
+		cout << "Human" << "\nhair: " << hair;
 	    cout << "\nnose: " << nose;
 		cout << "\ncolor eye: " << color_eye;
 		cout << "\nAge: " << age<< endl<< endl;
@@ -56,10 +60,10 @@ public:
 };
 int main() 
 {
-	rogue R1(41);
+	rogue R1(41,"dark", "green", "middle");
     R1.Vvod();
 	
-	rogue R2(23);
+	rogue R2(23, "Light", "blue", "big");
 	R2.Vvod();
 
 	return (0);
