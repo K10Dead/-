@@ -5,12 +5,10 @@ using namespace std;
 class rogue 
 {
 private:
-	
+	 string hair, color_eye, nose;
 	int age;
 public:
-     string hair, color_eye, nose;
-    
-	 
+
 	 rogue(int ageS)
 	 {
 	   age = ageS;
@@ -19,7 +17,25 @@ public:
 		
 		 cout << "Rogue Not found.   ";
 	 }
+	 string Gethair() {
+		 return hair;
+	 }
+	 void Sethair(string hairS) {
+		 hair = hairS;
+	 }
+	 string Getcolor_eye() {
+		 return color_eye;
+	 }
+	 void Setcolor_eye(string color_eyeS) {
+		 color_eye = color_eyeS;
+		 }
 
+	 string Getnose() {
+		 return nose;
+	}
+	 void Setnose(string noseS) {
+		 nose = noseS;
+		 }
 	int Getage()
 	 {
 		return age;
@@ -41,15 +57,9 @@ public:
 int main() 
 {
 	rogue R1(41);
-	R1.hair = "Dark";
-	R1.color_eye = "Brown";
-	R1.nose = "Big";
     R1.Vvod();
 	
 	rogue R2(23);
-	R2.hair = "Light";
-	R2.color_eye = "Brown";
-	R2.nose = "Middle";
 	R2.Vvod();
 
 	return (0);
